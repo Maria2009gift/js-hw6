@@ -3,7 +3,7 @@
 
 
 const btn = document.querySelector(".btn")
-
+const span1 = document.querySelector("#span1")
 
 
 btn.addEventListener("click", ()=> {
@@ -15,9 +15,11 @@ btn.addEventListener("click", ()=> {
 
 
 if (full1 !== "" && full2 !== "") {
-    console.log('Обидва поля заповнені');
+    span1.textContent = "Обидва поля заповнені"
+    // console.log('Обидва поля заповнені');
   } else {
-    console.log('Не всі поля заповнені')
+    span1.textContent = "Не всі поля заповнені"
+    // console.log('Не всі поля заповнені')
   }
 
 })
@@ -26,6 +28,7 @@ if (full1 !== "" && full2 !== "") {
 
 
 const btnwithnumb = document.querySelector("#btnNumb")
+const span2 = document.querySelector("#span2")
 
 btnwithnumb.addEventListener("click", ()=> {
 
@@ -35,9 +38,11 @@ const numberInput2 = document.querySelector("#numb2").value
 const sum = parseInt(numberInput1) + parseInt(numberInput2);
 
 if (sum > 10){
-    console.log('Сума більша за 10');
+    span2.textContent = "Сума більша за 10"
+    // console.log('Сума більша за 10');
 } else {
-    console.log('Сума менша або дорівнює 10');
+    span2.textContent = "Сума менша або дорівнює 10"
+    // console.log('Сума менша або дорівнює 10');
   }
 }
 )
@@ -45,30 +50,36 @@ if (sum > 10){
 // -----3-----
 
 const btnWithStr = document.querySelector("#btnWithStr")
+const span3 = document.querySelector("#span3")
 
 btnWithStr.addEventListener("click", ()=> {
 const justStr = document.querySelector("#justStr").value
 
 if (justStr.includes("JavaScript")) {
-    console.log("Текст містить слово JavaScript")
+    span3.textContent = "Текст містить слово JavaScript"
+    // console.log("Текст містить слово JavaScript")
 }
 else {
-    console.log("Текст не містить слово JavaScript")
+    span3.textContent = "Текст не містить слово JavaScript"
+//     console.log("Текст не містить слово JavaScript")
 }
 })
 
 // -----4-----
 
 const btnNumbDiapazon = document.querySelector("#btnNumbDiapazon")
+const span4 = document.querySelector("#span4")
 
 btnNumbDiapazon.addEventListener("click", ()=> {
 const numberDiapazon = parseInt(document.querySelector("#numberDiapazon").value)
 
 if (20 > numberDiapazon && numberDiapazon > 10){
-    console.log("в діпазоні від 10 до 20");
+    span4.textContent = "Число в діпазоні від 10 до 20"
+    // console.log("Число в діпазоні від 10 до 20");
 } 
 else {
-    console.log("не в діапазоні від 10 до 20");
+    span4.textContent = "Число не в діапазоні від 10 до 20"
+    // console.log("Число не в діапазоні від 10 до 20");
   }
 }
 )
@@ -76,6 +87,7 @@ else {
 // -----5-----
 
 const btnLogIn = document.querySelector("#btnLogIn")
+
 
 btnLogIn.addEventListener("click", ()=> {
 const name = document.querySelector("#name").value
@@ -90,7 +102,7 @@ if (nameLentgh >= 3 && mail.includes("@") && mail.includes(".") && passwordLentg
     window.location.href = "https://en.wikipedia.org/wiki/Cat";
 }
 else {
-    console.log("Сталась помилка!")
+    alert("Сталась помилка!")
 }
 
 })
